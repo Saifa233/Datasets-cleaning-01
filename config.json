@@ -1,0 +1,66 @@
+{
+    "ma_acdbe": {
+        "file_type": "excel",
+        "schema_mapping": {
+            "Business Name" : "CompanyName",
+            "NAICS" : "CommodityCodes",
+            "NAICS Description" : "Capabilities1",
+            "Address" : "PhysicalAddress",
+            "City" : "City",
+            "State" : "State",
+            "Zip" : "Zip",
+            "County" : "County",
+            "First Name" : "OwnerFirst",
+            "Last Name" : "OwnerLast",
+            "Email" : "Email",
+            "Website" : "Website",
+            "Telephone" : "Phone",
+            "Fax" : "Fax",
+            "Description of Services" : "Capabilities2",
+            "ACDBE Cert Date" : "CertifiedDate"
+        }
+    },
+
+    "ma_mwpbe": {
+        "file_type": "excel",
+        "schema_mapping": {
+            "Product Code" : "Capabilities1",
+            "Business Name" : "CompanyName",
+            "Address" : "PhysicalAddress",
+            "City" : "City",
+            "State" : "State",
+            "Zip" : "Zip",
+            "County" : "County",
+            "First Name" : "OwnerFirst",
+            "Last Name" : "OwnerLast",
+            "Telephone" : "Phone",
+            "Fax" : "Fax",
+            "Email" : "Email",
+            "Website" : "Website",
+            "SDO Cert Date" : "CertifiedDate",
+            "Description of Services" : "Capabilities2"
+        }
+    },
+
+    "ma_dbe": {
+        "file_type": "excel",
+        "schema_mapping": {
+            "NAICS" : "CommodityCodes",
+            "NAICS Description" : "Capabilities1",
+            "Business Name" : "CompanyName",
+            "Address" : "PhysicalAddress",
+            "City" : "City",
+            "State" : "State",
+            "Zip" : "Zip",
+            "County" : "County",
+            "First Name" : "OwnerFirst",
+            "Last Name" : "OwnerLast",
+            "Email" : "Email",
+            "Website" : "Website",
+            "Telephone" : "Phone",
+            "Fax" : "Fax",
+            "Description of Services" : "Capabilities2",
+            "DBE Cert Date" : "CertifiedDate"
+        }
+    }
+}
