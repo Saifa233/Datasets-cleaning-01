@@ -299,12 +299,12 @@ def replace_certificationtype_nj(x):
     '''
         return certification type for New Jersey
     '''
-    if x == "DVOB": return "SDVOB-NJ"
-    elif x == "MBE": return "MBE-NJ"
-    elif x == "MWBE": return "MBE-NJ, WBE-NJ"
-    elif x == "SBE": return "SBE-NJ"
-    elif x == "VOB": return "VOB-NJ"
-    elif x == "WBE": return "WBE-NJ"
+    if x == "DVOB": return "SDVOB - NJ"
+    elif x == "MBE": return "MBE - NJ"
+    elif x == "MWBE": return "MBE - NJ, WBE - NJ"
+    elif x == "SBE": return "SBE - NJ"
+    elif x == "VOB": return "VOB - NJ"
+    elif x == "WBE": return "WBE - NJ"
     else: return x
 
 
@@ -383,7 +383,7 @@ def get_cleaned_df_sdvob(df):
         dataset based on provided specifications
     '''
     df["Agency"] = "NYS"
-    df["CertificationType"] = "SDVOB"
+    df["CertificationType"] = "SDVOB - NYS"
     df.drop(["ControlNumber",
             "NAICS Code(s)",
             "NYS Vendor ID Number"], axis=1, inplace=True)
@@ -510,7 +510,7 @@ def get_certification_grouped(attr, df):
 
 def get_cleaned_df_ma_acdbe(df):
     df["Agency"] = "MA"
-    df["CertificationType"] = "DBE"
+    df["CertificationType"] = "DBE - MA"
     df["About"] = df["Description of Services"]
     df[["NAICS Description","Description of Services"]] = df[["NAICS Description","Description of Services"]].fillna('')
     df["Capability"] = df["NAICS Description"] + ' ' + df["Description of Services"] 
@@ -520,7 +520,7 @@ def get_cleaned_df_ma_acdbe(df):
 
 def get_cleaned_df_ma_dbe(df):
     df["Agency"] = "MA"
-    df["CertificationType"] = "DBE"
+    df["CertificationType"] = "DBE - MA"
     df["About"] = df["Description of Services"]
     df[["NAICS Description","Description of Services"]] = df[["NAICS Description","Description of Services"]].fillna('')
     df["Capability"] = df["NAICS Description"] + ' ' + df["Description of Services"] 
@@ -545,9 +545,9 @@ def get_cleaned_df_ma_mwpbe(df):
 
 def categorise(row):  
     if row["MBE - Y/N"] == "Y":
-        return "MBE"
+        return "MBE - MA"
     elif row["WBE - Y/N"] == "Y":
-        return "WBE"
+        return "WBE - MA"
     elif row["PBE - Y/N"] == "Y":
-        return "PBE"
+        return "PBE - MA"
     return ""
